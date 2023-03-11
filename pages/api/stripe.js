@@ -44,10 +44,10 @@ export default async function handler(req, res) {
         const session = await stripe.checkout.sessions.create(params);
         
         res.status(200).json(session);
-        console.log(json(session))
-        return;
+       
+       
       } catch (err) {
-        console.log("inside error")
+    
         res.status(err.statusCode || 500).json(err.message);
        
       }
