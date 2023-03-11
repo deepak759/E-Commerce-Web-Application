@@ -4,7 +4,7 @@
 // (process.env.STRIPE_SECRET_KEY);
 const publishableKey= `${process.env.STRIPE_SECRET_KEY}`;
 console.log(publishableKey)
-const stripe = require('stripe')(publishableKey);
+const stripe = require('stripe')('sk_test_51MRTIGSDJDvIvMxFDlztBn4kpDXWxlEcqQ49m7oG3kbg0ETcygqMbqd9wvgNTBnDAKv8xiWm2UHbW6otZLZdLZ0800sZDePMTI');
 export default async function handler(req, res) {
     if (req.method === 'POST') {
         console.log(req.body)
